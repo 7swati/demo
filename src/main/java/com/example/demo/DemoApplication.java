@@ -8,9 +8,14 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+// ✅ Tell JPA where to look
+@EnableJpaRepositories(basePackages = "com.example.demo.repository.jpa")
+
+// ✅ Tell Mongo where to look
+@EnableMongoRepositories(basePackages = "com.example.demo.repository.mongo")
+
+// ✅ Tell JPA where entities are
 @EntityScan(basePackages = "com.example.demo.entity")
-@EnableJpaRepositories(basePackages = "com.example.demo.repository")
-@EnableMongoRepositories(basePackages = "com.example.demo.repository")
 public class DemoApplication {
 
 	public static void main(String[] args) {

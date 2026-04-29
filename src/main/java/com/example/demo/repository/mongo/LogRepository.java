@@ -1,4 +1,4 @@
-package com.example.demo.repository;
+package com.example.demo.repository.mongo;
 
 import com.example.demo.entity.mongo.LogEntry;
 import org.springframework.data.mongodb.repository.MongoRepository;

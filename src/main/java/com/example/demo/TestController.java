@@ -2,8 +2,8 @@ package com.example.demo;
 
 import com.example.demo.entity.User;
 import com.example.demo.entity.mongo.LogEntry;
-import com.example.demo.repository.LogRepository;
-import com.example.demo.repository.UserRepository;
+import com.example.demo.repository.mongo.LogRepository;
+import com.example.demo.repository.jpa.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
